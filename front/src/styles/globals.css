@@ -65,7 +65,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #EFEFEF;
+  background: white;
 }
 
 a {
@@ -77,6 +77,24 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #EAEAEA;
+  border-bottom: 1px solid #c0c0c0;
+  display: flex;
+  align-items: baseline;
+  padding: 1em;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
 }
 
 form {

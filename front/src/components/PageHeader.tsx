@@ -1,14 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
-type HeaderProps = { home?: boolean };
-export const PageHeader = ({ home = false }: HeaderProps) => (
-  <header>
-    {!home && (
-      <div>
-        <Link href={"/"}>Back</Link>
-      </div>
-    )}
-    <div>TracTrucs&nbsp;!</div>
-  </header>
-);
+export const PageHeader = () => {
+  const pathname = usePathname();
+
+  return (
+    <header>
+      {"/" !== pathname && (
+        <div>
+          <Link href={"/"}>Back</Link>
+        </div>
+      )}
+      <div>TracTrucs&nbsp;!</div>
+    </header>
+  );
+};

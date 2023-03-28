@@ -1,13 +1,14 @@
-import Head from "next/head";
+"use client";
+
 import Link from "next/link";
-import Layout from "@/components/layout";
+
+export const metadata = {
+  title: "TracTruc - L'application pour tracker de trucs",
+};
 
 export default function Home() {
   return (
-    <Layout home={true}>
-      <Head>
-        <title>{"TracTruc - L'application pour tracker de trucs"}</title>
-      </Head>
+    <div>
       <div className={"tabs"}>
         <div>
           <Link href={"/dashboard"}>Suivi</Link>
@@ -27,6 +28,6 @@ export default function Home() {
           <Link href={"/recordNew"}>Ajouter un truc</Link>
         </div>
       </main>
-    </Layout>
+    </div>
   );
 }

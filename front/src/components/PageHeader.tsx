@@ -14,7 +14,9 @@ export const PageHeader = () => {
           <Link href={"/"}>Back</Link>
         </div>
       )}
-      <div>TracTrucs&nbsp;!</div>
+      <div  className="has-text-centered">
+        TracTrucs&nbsp;!
+      </div>
     </header>
   );
 };
